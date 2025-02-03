@@ -165,7 +165,8 @@ export class QwertyKeyboard {
 	//*=======================
 
 	private get root() {
-		return this.rows === 1 ? 'KeyA' : 'KeyZ'
+		//return this.rows === 1 ? 'KeyA' : 'KeyZ'
+		return 'KeyQ'
 	}
 
 	/** `map` returns the midi note for a given keyCode.  */

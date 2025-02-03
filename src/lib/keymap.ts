@@ -5,7 +5,7 @@ import type { Keymap, SpecialKeymap } from './types/Keymap'
  * The map of each key to its corresponding note for
  * the a single-row layout.
  */
-export const keymapSingle: Keymap = {
+/* export const keymapSingle: Keymap = {
     KeyA: 	      { key: 'A',  color: 'white',  midi: 60,  name: 'C2', },
     KeyW: 	      { key: 'W',  color: 'black',  midi: 61,  name: 'C#2',},
     KeyS: 	      { key: 'S',  color: 'white',  midi: 62,  name: 'D2', },
@@ -24,6 +24,29 @@ export const keymapSingle: Keymap = {
     KeyP: 	      { key: 'P',  color: 'black',  midi: 75,  name: 'D#3',},
     Semicolon:    { key: ';',  color: 'white',  midi: 76,  name: 'E3', },
     Quote:	      { key: '"',  color: 'white',  midi: 77,  name: 'F3', },
+} */
+export const keymapSingle: Keymap = {
+    // Top row starting with `Q`.
+    KeyQ:         { key: 'Q',  color: 'white',  midi: 60,  name: 'C2',  },
+    Digit2:       { key: '2',  color: 'black',  midi: 61,  name: 'C#2', },
+    KeyW:         { key: 'W',  color: 'white',  midi: 62,  name: 'D2',  },
+    Digit3:       { key: '3',  color: 'black',  midi: 63,  name: 'D#2', },
+    KeyE:         { key: 'E',  color: 'white',  midi: 64,  name: 'E2',  },
+    KeyR:         { key: 'R',  color: 'white',  midi: 65,  name: 'F2',  },
+    Digit5:       { key: '5',  color: 'black',  midi: 66,  name: 'F#2', },
+    KeyT:         { key: 'T',  color: 'white',  midi: 67,  name: 'G2',  },
+    Digit6:       { key: '6',  color: 'black',  midi: 68,  name: 'G#2', },
+    KeyY: 	      { key: 'Y',  color: 'white',  midi: 69,  name: 'A2',  },
+    Digit7:       { key: '7',  color: 'black',  midi: 70,  name: 'A#2', },
+    KeyU: 	      { key: 'U',  color: 'white',  midi: 71,  name: 'B2',  },
+    KeyI: 	      { key: 'I',  color: 'white',  midi: 72,  name: 'C3',  },
+    Digit9:       { key: '9',  color: 'black',  midi: 73,  name: 'C#3', },
+    KeyO: 	      { key: 'O',  color: 'white',  midi: 74,  name: 'D3',  },
+    Digit0:       { key: '0',  color: 'black',  midi: 75,  name: 'D#3', },
+    KeyP: 	      { key: 'P',  color: 'white',  midi: 76,  name: 'E3',  },
+    BracketLeft:  { key: '[',  color: 'white',  midi: 77,  name: 'F3',  },
+    Equal:        { key: '=',  color: 'black',  midi: 78,  name: 'F#3', },
+    BracketRight: { key: ']',  color: 'white',  midi: 79,  name: 'G3',  },
 }
 
 /**

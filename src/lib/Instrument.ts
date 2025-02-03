@@ -1,7 +1,8 @@
 import type { QwertyKeyboard } from './QwertyKeyboard'
 import type { Subscription } from 'rxjs'
 
-import { Sampler, PingPongDelay, Reverb, Frequency } from 'tone'
+//import { Sampler, PingPongDelay, Reverb, Frequency } from 'tone'
+import * as Tone from 'tone';
 import { log } from 'fractils'
 import { DEV } from 'esm-env'
 
@@ -48,7 +49,7 @@ export class Instrument {
 
 	selectedInstrument: keyof typeof instruments = 'electric'
 
-	sampler = new Sampler({
+	sampler = new Tone.Sampler({
 		...Object.fromEntries(Object.entries(instruments[this.selectedInstrument])),
 		onload: () => {
 			this.sampler.volume.value = -6
@@ -61,13 +62,13 @@ export class Instrument {
 	keydown!: Subscription
 	keyup!: Subscription
 
-	pingpong = new PingPongDelay({
+	pingpong = new Tone.PingPongDelay({
 		wet: 0.1,
 		delayTime: 0.25,
 		feedback: 0.5,
 	})
 
-	reverb = new Reverb({
+	reverb = new Tone.Reverb({
 		wet: 0.3,
 		decay: 10,
 		preDelay: 0.01,
@@ -80,7 +81,7 @@ export class Instrument {
 		if (this.keyboard.onKeyDown)
 			this.keydown = this.keyboard.onKeyDown.subscribe((note) => {
 				const transposition = this.keyboard.state.octave * 12
-				const midiNote = Frequency(note.name).transpose(transposition).toFrequency()
+				const midiNote = Tone.Frequency(note.name).transpose(transposition).toFrequency()
 				this.sampler.triggerAttack(midiNote, '+0.01', note.velocity / 127)
 			})
 

@@ -228,7 +228,7 @@
 									.code {keyCodes[i]}
 
 						//- White keys
-						+elseif('![2, 7, 9, 14].includes(i)')
+						+elseif('![2, 7, 9, 14, 19].includes(i)')
 							.spacer
 
 			div.keys.white
